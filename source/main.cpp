@@ -5,7 +5,7 @@
 // Initializes GLUT, the display mode, and main window; registers callbacks;
 // enters the main event loop.
 #include <iostream>
-#include <external/glfw/glfw3.h>
+#include <GLFW/glfw3.h>
 
 int main(void)
 {
