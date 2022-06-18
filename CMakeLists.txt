@@ -11,6 +11,7 @@ add_executable(${PROJECT_NAME}
     main.cpp
     glad/glad.c 
     source/firstWindow.cpp
+    source/input.cpp
 )
 
 #           CHECK ALL THE SUBMODULES
