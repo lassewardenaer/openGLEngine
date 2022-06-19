@@ -1,6 +1,3 @@
-#ifndef FIRST_WINDOW
-#define FIRST_WINDOW
-
 #include "firstWindow.h"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -42,5 +39,3 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
 }
-
-#endif

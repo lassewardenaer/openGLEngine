@@ -1,6 +1,3 @@
-#ifndef INPUT
-#define INPUT
-
 #include "input.h"
 
 void ProgramInput::processInput(GLFWwindow *window) 
@@ -11,5 +8,3 @@ void ProgramInput::processInput(GLFWwindow *window)
 
 ProgramInput::ProgramInput(){}
 ProgramInput::~ProgramInput(){}
-
-#endif

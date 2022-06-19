@@ -1,6 +1,3 @@
-#ifndef TRIANGLE
-#define TRIANGLE
-
 #include "triangle.h"
 #include <iostream>
 
@@ -85,5 +82,3 @@ Triangle::~Triangle()
     glDeleteBuffers(1, &VBO);
     glDeleteProgram(shaderProgram);
 }
-
-#endif

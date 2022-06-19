@@ -1,3 +1,6 @@
+#ifndef INPUT
+#define INPUT
+
 #include <GLFW/glfw3.h>
 
 class ProgramInput
@@ -9,3 +12,5 @@ public:
 
     void processInput(GLFWwindow *window);
 };
+
+#endif
