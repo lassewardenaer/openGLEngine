@@ -8,9 +8,10 @@
 class FirstWindow
 {
 public:
-    GLFWwindow* programWindow;
+    GLFWwindow *programWindow;
+
 public:
-    FirstWindow(int width, int height, const char* title);
+    FirstWindow(int width, int height, const char *title);
     ~FirstWindow();
 };
 

@@ -1,32 +1,27 @@
 #include "source/firstWindow.h"
 #include "source/input.h"
 #include "source/triangle.h"
+#include "source/shaders/shader.h"
 
 int main(int argc, char const *argv[])
-{   
-    FirstWindow* windowObj = new FirstWindow(800, 500, "OpenGL");
-    ProgramInput *input = new ProgramInput();
-    Triangle *triangle = new Triangle(
-        0, 
-        {-0.5f, 0.5f, 0.0f}, 
-        {-0.5f, -0.5f, 0.5f}, 
-        {0.0f, 0.5f, 0.0f}); 
+{
+    FirstWindow windowObj(800, 500, "OpenGL");
+    ProgramInput programInput;
+    Triangle triangle;
 
-    while(!glfwWindowShouldClose(windowObj->programWindow))
+    while (!glfwWindowShouldClose(windowObj.programWindow))
     {
         // input
-        input->processInput(windowObj->programWindow);
+        programInput.processInput(windowObj.programWindow);
 
         // rendering commands
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        glUseProgram(triangle->shaderProgram);
-        glBindVertexArray(triangle->VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        triangle.show();
 
         // check and call events and swap the buffers
-        glfwSwapBuffers(windowObj->programWindow);
+        glfwSwapBuffers(windowObj.programWindow);
         glfwPollEvents();
     }
 

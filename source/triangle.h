@@ -1,6 +1,8 @@
 #ifndef TRIANGLE
 #define TRIANGLE
 
+#include "shader.h"
+
 #include <vector>
 #include <glad/glad.h>
 
@@ -11,12 +13,17 @@ private:
     unsigned int vertexShader;
     unsigned int fragmentShader;
     unsigned int VBO;
+    Shader shader;
+
 public:
     unsigned int shaderProgram;
     unsigned int VAO;
+
 public:
-    Triangle(float pos, std::vector<float> x, std::vector<float> y, std::vector<float> z);
+    Triangle();
     ~Triangle();
+
+    void show();
 };
 
 #endif
