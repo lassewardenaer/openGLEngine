@@ -8,6 +8,7 @@ add_subdirectory(source/shaders)
 include_directories(source/shaders)
 include_directories(glad)
 add_subdirectory(external/glfw)
+add_subdirectory(external/stb_image)
 
 add_executable(${PROJECT_NAME} 
     main.cpp
@@ -16,6 +17,7 @@ add_executable(${PROJECT_NAME}
     source/input.cpp
     source/triangle.cpp
     source/shaders/shader.cpp
+    external/stb_image/stb_image.cpp
 )
 
 #           CHECK ALL THE SUBMODULES
